@@ -1,0 +1,47 @@
+@namespace(uri="schema", prefix="schema")
+@gmf
+package schema;
+
+@gmf.diagram
+class Schema {
+	val Node[*] nodes;
+	val Link[*] links;
+}
+
+@gmf.node(label = "name")
+abstract class Node {
+    attr String name;
+    @gmf.compartment(layout = "list")
+    val Attribute[*] attrs;
+}
+
+enum typeAttribute {
+    String = 0;
+    Float = 1;
+    Double = 2;
+    Boolean = 3;
+    char = 4;
+}
+
+class Attribute {
+    @gmf.label
+    attr String name;
+    attr typeAttribute type;
+    @gmf.compartment(layout = "list")
+    val Attribute[*] attributes;
+    
+}
+
+class Entity extends Node {
+    
+}
+
+class Relationship extends Node{
+    
+}
+
+@gmf.link(source="source", target="target", style="dot", width="2")
+class Link {
+    ref Entity source;
+    ref Relationship target;
+}
