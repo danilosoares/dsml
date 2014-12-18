@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="index">
+  <figures name="Default">
+    <descriptors name="EntityFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="EntityFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EntityLabelFigure" text="Entity">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="EntityAttributesCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureEntityLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors accessor="getEntityAttributesCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="RelationShipFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" name="RelationShipFigure" qualifiedClassName="figures.DiamondFigure">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        <children xsi:type="gmfgraph:Label" name="RelationShipLabelFigure" text="RelationShip">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="RelationShipAttributesCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureRelationShipLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getRelationShipAttributesCompartmentFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="AttributeFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AttributeFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AttributeLabelFigure" text="Attribute">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="AttributeAttributesCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureAttributeLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors accessor="getAttributeAttributesCompartmentFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="RelationShipLinkFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RelationShipLinkFigure" lineWidth="2" lineKind="LINE_DOT"/>
+    </descriptors>
+  </figures>
+  <nodes name="Entity" figure="EntityFigure"/>
+  <nodes name="RelationShip" figure="RelationShipFigure"/>
+  <nodes name="Attribute" figure="AttributeFigure"/>
+  <connections name="RelationShipLink" figure="RelationShipLinkFigure"/>
+  <compartments name="EntityAttributesCompartment" figure="EntityFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <compartments name="RelationShipAttributesCompartment" figure="RelationShipFigure" collapsible="true" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <compartments name="AttributeAttributesCompartment" figure="AttributeFigure" collapsible="true" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <labels name="EntityLabel" figure="EntityFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="RelationShipLabel" figure="RelationShipFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="AttributeLabel" figure="AttributeFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+</gmfgraph:Canvas>
